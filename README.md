@@ -1,12 +1,67 @@
-# React + Vite
+# Trabalho Prático 01 – React com API 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação React desenvolvida com Vite, que consome dados de uma API pública do jogo League of Legends e os exibe em cards estilizados com Bootstrap. A aplicação inclui filtros interativos para facilitar a navegação pelos dados.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+- Axios
+- React Bootstrap
+- Hooks (useState, useEffect)
+- JavaScript
+- Boostrap
+- Tailwind
 
-## Expanding the ESLint configuration
+## 👥 Equipe e Responsabilidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 👨‍💻 Luiz Souza
+- Estruturação inicial do projeto com Vite
+- Configuração dos hooks useState e useEffect
+- Implementação das requisições à API utilizando Axios
+- Garantia do carregamento automático dos dados na inicialização da aplicação
+- Desenvolvimento do Design dos Card & Páginas
+
+### 👨‍💻 Renan
+- Desenvolvimento da interface utilizando componentes do React Bootstrap
+- Garantia de um layout organizado e responsivo
+- Criação do layout dos cards para exibir pelo menos 6 informações por item
+- Estilização dos filtros e botões com Bootstrap
+
+### 👨‍💻 Itallo
+- Criação dos botões de filtro pré-definidos (ex: “Magos”, “Tanques”, etc.)
+- Implementação do método `.filter()` para aplicar os filtros
+- Implementação do botão “Mostrar Todos” para restaurar a lista original
+- Garantia de que os filtros afetam corretamente o estado da aplicação
+
+## 📁 Estrutura do Projeto
+```
+Trabalho_Pratico_01_React/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── ChampionCard.jsx
+│ │ └── FilterButtons.jsx
+│ ├── App.jsx
+│ └── index.jsx
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## 🔧 Como Executar o Projeto
+
+1. Siga esses passos para rodar o projeto:
+
+```bash
+   git clone https://github.com/LuixzSouza/Trabalho_Pratico_01_React.git
+
+  cd Trabalho_Pratico_01_React
+
+  npm install
+
+  npm run dev
+```
+
+
