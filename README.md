@@ -12,6 +12,7 @@ Este projeto é uma aplicação React desenvolvida com Vite, que consome dados d
 - JavaScript
 - Boostrap
 - Tailwind
+- tailwind-merge
 
 ## 👥 Equipe e Responsabilidades
 
@@ -26,7 +27,7 @@ Este projeto é uma aplicação React desenvolvida com Vite, que consome dados d
 - Desenvolvimento da interface utilizando componentes do React Bootstrap
 - Garantia de um layout organizado e responsivo
 - Criação do layout dos cards para exibir pelo menos 6 informações por item
-- Estilização dos filtros e botões com Bootstrap
+- Estilização dos filtros e botões com Bootstrap/Tailwind
 
 ### 👨‍💻 Itallo
 - Criação dos botões de filtro pré-definidos (ex: “Magos”, “Tanques”, etc.)
