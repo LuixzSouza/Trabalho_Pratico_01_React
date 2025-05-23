@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
 
 export function DarkLight() {
-  const [darkMode, setDarkMode] = useState(false);
+  // Checar tema no momento da inicialização (em runtime, window precisa existir)
+  const getInitialTheme = () => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") === "dark";
+    }
+    return false; // fallback para SSR
+  };
+
+  const [darkMode, setDarkMode] = useState(getInitialTheme);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
   return (
@@ -12,7 +21,7 @@ export function DarkLight() {
       <div className="w-20 h-20 bg-gray-300 dark:bg-gray-800 rounded-full overflow-hidden shadow-inner relative">
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className={`absolute top-0 left-0 w-20 h-20 transition-all duration-700 ease-in-out`}
+          className="absolute top-0 left-0 w-20 h-20 transition-all duration-700 ease-in-out"
         >
           {/* ☀️ Sol */}
           <img

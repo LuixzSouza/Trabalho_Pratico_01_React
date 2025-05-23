@@ -33,7 +33,7 @@ function ChampionCard({ champion, onClick }) {
       <ul className="w-full text-sm space-y-2 mt-8">
         <li>
           <div className="flex items-center gap-2">
-            <img className='max-w-4' src="/icons/icons_game/icon_static_ad.svg" alt="" />
+            <img className='invert dark:invert-0 max-w-4' src="/icons/icons_game/icon_static_ad.svg" alt="" />
             <span className="w-20">Ataque</span>
             <div className="flex-1 h-2 bg-darkFill rounded">
               <div
@@ -47,7 +47,7 @@ function ChampionCard({ champion, onClick }) {
 
         <li>
           <div className="flex items-center gap-2">
-            <img className='max-w-4' src="/icons/icons_game/icon_static_ar.svg" alt="" />
+            <img className='invert dark:invert-0 max-w-4' src="/icons/icons_game/icon_static_ar.svg" alt="" />
             <span className="w-20">Defesa</span>
             <div className="flex-1 h-2 bg-darkFill rounded">
               <div
@@ -61,7 +61,7 @@ function ChampionCard({ champion, onClick }) {
 
         <li>
           <div className="flex items-center gap-2">
-            <img className='max-w-4' src="/icons/icons_game/icon_static_mg.svg" alt="" />
+            <img className='invert dark:invert-0 max-w-4' src="/icons/icons_game/icon_static_mg.svg" alt="" />
             <span className="w-20">Magia</span>
             <div className="flex-1 h-2 bg-darkFill rounded">
               <div
@@ -75,7 +75,7 @@ function ChampionCard({ champion, onClick }) {
 
         <li>
           <div className="flex items-center gap-2">
-            <img className='max-w-4' src="/icons/icons_game/icon_static_attackRange.svg" alt="" />
+            <img className='invert dark:invert-0 max-w-4' src="/icons/icons_game/icon_static_attackRange.svg" alt="" />
             <span className="w-20">Dificuldade</span>
             <div className="flex-1 h-2 bg-darkFill rounded">
               <div
@@ -89,15 +89,15 @@ function ChampionCard({ champion, onClick }) {
       </ul>
       <ul className='w-full flex flex-wrap items-center justify-between' >
         <li className='flex' >
-          <img className='max-w-4' src="/icons/icons_game/icon_static_hp.svg" alt="" />
+          <img className='invert dark:invert-0 max-w-4' src="/icons/icons_game/icon_static_hp.svg" alt="" />
           <strong>HP: {stats.hp}</strong>
         </li>
         <li className='flex' >
-          <img className='max-w-4' src="/icons/icons_game/icon_static_ad.svg" alt="" />
+          <img className='invert dark:invert-0 max-w-4' src="/icons/icons_game/icon_static_ad.svg" alt="" />
           <strong>AD: {stats.attackdamage}</strong>
         </li>
         <li className='flex' >
-          <img className='max-w-4' src="/icons/icons_game/icon_static_attackSpeed.svg" alt="" />
+          <img className='invert dark:invert-0 max-w-4' src="/icons/icons_game/icon_static_attackSpeed.svg" alt="" />
           <strong>Atk Spd: {stats.movespeed}</strong>
         </li>
       </ul>

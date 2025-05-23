@@ -49,14 +49,60 @@ function ChampionDetail({ champion, onBack }) {
               <p className='text-primaryGold text-2xl' >{fullData.lore}</p>
             </div>
             <div className='mt-10 flex items-start max-w-screen-md  w-full h-full min-h-52' >
-              <ul className='w-full border-r-8 border-primaryGold h-full' >
-                <h5 className='text-center text-primaryGold text-3xl mb-3' >Atributos</h5>
-                <li className='flex items-center gap-5' ><img src="./icons/icons_game/icon_class_Todos.svg" alt="" /> teste</li>
+              {/* Atributos */}
+              <ul className='w-full border-r-8 border-primaryGold h-full px-4 text-primaryGold'>
+                <h5 className='text-center text-primaryGold text-3xl mb-3'>Atributos</h5>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_ad.svg" alt="Ataque" />
+                  Ataque: {fullData.info.attack}
+                </li>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_mr.svg" alt="Defesa" />
+                  Defesa: {fullData.info.defense}
+                </li>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_mg.svg" alt="Magia" />
+                  Magia: {fullData.info.magic}
+                </li>
+                <li className='flex items-center gap-5'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_attackRange.svg" alt="Dificuldade" />
+                  Dificuldade: {fullData.info.difficulty}
+                </li>
               </ul>
-              <ul className='w-full' >
-                <h5 className='text-center text-primaryGold text-3xl mb-3' >Estastiticas</h5>
-                <li className='flex items-center gap-5' ><img src="./icons/icons_game/icon_class_Todos.svg" alt="" /> teste</li>
+
+              {/* Estatísticas */}
+              <ul className='w-full px-4 text-primaryGold'>
+                <h5 className='text-center text-primaryGold text-3xl mb-3'>Estatísticas</h5>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_hp5.svg" alt="Vida" />
+                  Vida: {fullData.stats.hp}
+                </li>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_mp5.svg" alt="Mana" />
+                  Mana: {fullData.stats.mp}
+                </li>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_ad.svg" alt="Dano de Ataque" />
+                  Dano de Ataque: {fullData.stats.attackdamage}
+                </li>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_attackSpeed.svg" alt="Velocidade de Ataque" />
+                  Velocidade de Ataque: {fullData.stats.attackspeed}
+                </li>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_mr.svg" alt="Resistência Mágica" />
+                  Resistência Mágica: {fullData.stats.spellblock}
+                </li>
+                <li className='flex items-center gap-5 mb-2'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_ms.svg" alt="Velocidade de Movimento" />
+                  Velocidade de Movimento: {fullData.stats.movespeed}
+                </li>
+                <li className='flex items-center gap-5'>
+                  <img className='invert dark:invert-0' src="./icons/icons_game/icon_static_attackRange.svg" alt="Alcance" />
+                  Alcance: {fullData.stats.attackrange}
+                </li>
               </ul>
+
             </div>
           </ContainerGrid>
         </div>
