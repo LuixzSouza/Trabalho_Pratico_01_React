@@ -26,31 +26,29 @@ export function SContentCard() {
     
     return(
         <section className='bg-white/60 dark:bg-black py-8 transition-all duration-500 ease-in-out' >
-            <ContainerGrid>
                 <h2 className=" text-center text-4xl mb-10 text-primaryGold">Campeões de League of Legends</h2>
                 {!selectedChampion ? (
-                    <>
-                    <div className="flex justify-center gap-2 mb-3 flex-wrap">
-                       <ButtonLoL filtro="Fighter" setFilter={setFilter} filtroAtivo={filter}>Lutadores</ButtonLoL>
-                        <ButtonLoL filtro="Mage" setFilter={setFilter} filtroAtivo={filter}>Magos</ButtonLoL>
-                        <ButtonLoL filtro="Assassin" setFilter={setFilter} filtroAtivo={filter}>Assassinos</ButtonLoL>
-                        <ButtonLoL filtro="Tank" setFilter={setFilter} filtroAtivo={filter}>Tanques</ButtonLoL>
-                        <ButtonLoL filtro="Marksman" setFilter={setFilter} filtroAtivo={filter}>Atiradores</ButtonLoL>
-                        <ButtonLoL filtro="Support" setFilter={setFilter} filtroAtivo={filter}>Suportes</ButtonLoL>
-                        <ButtonLoL filtro="Todos" setFilter={setFilter} filtroAtivo={filter}>Todos</ButtonLoL>
-                    </div>
-                    <div className="mt-20 grid gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-items-center">
-                        {filtered.map((champ) => (
-                        <div key={champ.id}>
-                            <ChampionCard champion={champ} onClick={() => setSelectedChampion(champ)} />
+                    <ContainerGrid>
+                        <div className="flex justify-center gap-2 mb-3 flex-wrap">
+                        <ButtonLoL filtro="Fighter" setFilter={setFilter} filtroAtivo={filter}>Lutadores</ButtonLoL>
+                            <ButtonLoL filtro="Mage" setFilter={setFilter} filtroAtivo={filter}>Magos</ButtonLoL>
+                            <ButtonLoL filtro="Assassin" setFilter={setFilter} filtroAtivo={filter}>Assassinos</ButtonLoL>
+                            <ButtonLoL filtro="Tank" setFilter={setFilter} filtroAtivo={filter}>Tanques</ButtonLoL>
+                            <ButtonLoL filtro="Marksman" setFilter={setFilter} filtroAtivo={filter}>Atiradores</ButtonLoL>
+                            <ButtonLoL filtro="Support" setFilter={setFilter} filtroAtivo={filter}>Suportes</ButtonLoL>
+                            <ButtonLoL filtro="Todos" setFilter={setFilter} filtroAtivo={filter}>Todos</ButtonLoL>
                         </div>
-                        ))}
-                    </div>
-                    </>
+                        <div className="mt-20 grid gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-items-center">
+                            {filtered.map((champ) => (
+                            <div key={champ.id}>
+                                <ChampionCard champion={champ} onClick={() => setSelectedChampion(champ)} />
+                            </div>
+                            ))}
+                        </div>
+                    </ContainerGrid>
                 ) : (
                     <ChampionDetail champion={selectedChampion} onBack={() => setSelectedChampion(null)} />
                 )}
-            </ContainerGrid>
         </section>
     )
 }

@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryGold: '#FFCE7E',
+        primaryGold: '#b8860b',
+        // primaryGold: '#FFCE7E',
       },
       backgroundColor: {
         // Cores Simples
@@ -29,6 +30,8 @@ export default {
         gradientLine: 'linear-gradient(90deg, #D29F53 0%, #B68A48 35%, #8A6837 65%, #6C522B 100%)',
         gradientLineFill: 'linear-gradient(-90deg, #0D0F11 0%, #E3AB5A 100%)',
         gradienButton: 'linear-gradient(90deg, #533C1E 0%, #3B2C18 100%)',
+        gradienblacktransparent: 'linear-gradient(90deg,rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.35) 75%, rgba(0, 0, 0, 0) 100%);',
+        gradienwhitetransparent: 'linear-gradient(90deg,rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0.35) 75%, rgba(255, 255, 255, 0) 100%);',
       },  
     },
   },
